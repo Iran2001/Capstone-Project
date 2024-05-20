@@ -1,0 +1,128 @@
+.admin-resetpwd-main-big-rect {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    margin-top: -85vh;
+    margin-left: 24%;
+    width: 75%;
+    height: 70vh;
+    background-color: rgb(227, 227, 227);
+    border-radius: 20px;
+}
+
+.admin-resetpwd-main-photo1 {
+    display: flex;
+    width: 50%;
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: 53.5px;
+}
+
+.admin-resetpwd-main-form-1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: 47.5px;
+    color: black;
+}
+
+.admin-resetpwd-image {
+    height: 54vh;
+    margin-top: 4px;
+    border-radius: 5px;
+}
+
+.admin-resetpwd-main-topic {
+    font-family: Arial;
+    margin-bottom: -15px;
+    margin-left: 5%;
+}
+
+.admin-resetpwd-sub-min-topic {
+    font-family: Arial;
+    font-weight: 100;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.admin-resetpwd-sub-main-topic {
+    font-family: Arial;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 2.5%;
+
+}
+
+.admin-resetpwd-main-text-rect-in{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15vh;
+    border-radius: 20px;
+    margin-left: 0%;
+    margin-top: 2px;
+    color: black;
+}
+
+.admin-resetpwd-txt-field-topic-in {
+    font-size: 12px;
+    font-family: 'Lucida Sans';
+    font-weight: 500;
+    margin-left: 3%;
+    margin-bottom: 5px;
+}
+
+.admin-shared-box-width {
+    width: 230px; /* Adjust this value to your desired width */
+    /* Add other styles for the boxes if needed (e.g., margin, padding) */
+  }
+  
+
+
+.admin-resetpwd-fieldsty-in {
+    margin-bottom: -10px;
+}
+
+
+.admin-resetpwd-already-reg-rect-in {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 80vh;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    margin-left: 4%;
+    margin-top: 20px;
+}
+
+.admin-resetpwd-already-reg-topic-in {
+    font-family: 'Lucida Sans';
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 2%;
+}
+
+.admin-resetpwd-signup-link-txt {
+    color: rgb(0, 0, 79);
+    margin-top: 20px;
+    margin-left: 4%;
+}
+
+.admin-resetpwd-signin-main-btn {
+    width: 40%;
+    padding: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(0, 0, 79);
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 6%;
+    margin-top: 60px;
+    margin-bottom: 5px;
+}

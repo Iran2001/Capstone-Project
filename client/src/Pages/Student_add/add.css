@@ -1,0 +1,50 @@
+.big-rect3 {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -118vh;
+    margin-left: 22%;
+}
+
+.top-head3 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+}
+
+.std-info-rect3 {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 90vh;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 12px;
+    background-color: rgb(227, 227, 227);
+}
+
+.add-top-head3 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: x-large;
+    color: rgba(201, 201, 2, 0.99);
+}
+
+.xs-add-main-info-rect3 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 50vh;
+}
+.xs-add-sub3{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 60vh;
+    border-radius: 25px;
+    margin-left: 6.3%;
+    margin-top: 20px;
+}
+.add-save-btn{
+    margin-top: 40px;
+    margin-left: 73%;
+}
