@@ -1,0 +1,107 @@
+.std-prof-main-big-rect{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -118vh;
+    margin-left: 22%;
+    align-items: center;
+}
+
+.std-prof-big-rect{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: rgb(227, 227, 227);
+    margin-top: 5%;
+    width: 90%;
+    height: 90vh;
+    border-radius: 20px;
+}
+
+.std-prof-top-head{
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    margin-left: 5%;
+}
+
+.std-prof-sub-big-rect{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    margin-left: 0.5%;
+    width: 99%;
+    height: 80vh;
+}
+
+.std-prof-sub-sub-rect{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    background-color: rgb(14, 7, 7);
+    width: 96%;
+    height: 2px;
+    margin-left: 2%;
+}
+
+.std-prof-sub-small-rect1{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -2%;
+    width: 40%;
+    height: 65vh;
+    margin-left: 6%;
+}
+
+.std-prof-sub-small-rect2{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -2%;
+    width: 50%;
+    height: 60vh;
+    margin-left: 2%;
+}
+
+.std-prof-photo{
+    background-color: rgb(110, 31, 31);
+    margin-top: -3%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.std-prof-txt-field{
+    margin-top: -1%;
+}
+
+.std-prof-head-txt{
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.std-prof-head-txt1{
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    margin-top: 12%;
+}
+
+.std-prof-head-txt2{
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    margin-top: 5%;
+}
+
+.std-edit-edit-btn{
+    margin-top: -8%;
+    margin-left: 10%;
+}
+
+.std-update-update-btn{
+    margin-left: 6.5%;
+    margin-bottom: 5%;
+}
+

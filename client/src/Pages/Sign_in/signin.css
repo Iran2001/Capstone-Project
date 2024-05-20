@@ -1,0 +1,154 @@
+.signin-main-big-rect {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    margin-top: -90vh;
+    margin-left: 24%;
+    width: 75%;
+    height: 82vh;
+    background-color: rgb(227, 227, 227);
+    border-radius: 20px;
+}
+
+.signin-main-photo1 {
+    display: flex;
+    width: 50%;
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: 107.5px;
+}
+
+.signin-main-form-1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: 47.5px;
+    color: black;
+}
+
+.signin-image {
+    height: 54vh;
+    margin-top: 4px;
+    border-radius: 5px;
+}
+
+.signin-main-topic {
+    font-family: Arial;
+    margin-bottom: -15px;
+    margin-left: 5%;
+}
+
+.signin-sub-min-topic {
+    font-family: Arial;
+    font-weight: 100;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.signin-sub-main-topic {
+    font-family: Arial;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-left: 2.5%;
+
+}
+
+.pass-main-text-rect-in{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15vh;
+    border-radius: 20px;
+    margin-left: 0%;
+    margin-top: 2px;
+    color: black;
+}
+
+.txt-field-topic-in {
+    font-family: 'Lucida Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 3%;
+    margin-bottom: 5px;
+}
+
+.shared-box-width {
+    width: 230px; /* Adjust this value to your desired width */
+    /* Add other styles for the boxes if needed (e.g., margin, padding) */
+  }
+  
+
+.txt-field-topic1-in {
+    font-family: 'Lucida Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 7%;
+    margin-bottom: 5px;
+}
+
+.fieldsty-in {
+    margin-bottom: -10px;
+}
+
+.forgot-psw-rect-in {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    color: rgb(0, 0, 79);
+    text-align: center;
+    margin-left: 24%;
+    margin-top: -35px;
+    cursor: pointer;
+}
+
+.forgot-psw-topic-in {
+    font-family: 'Lucida Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 2%;
+}
+
+.already-reg-rect-in {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 80vh;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.already-reg-topic-in {
+    font-family: 'Lucida Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 2%;
+}
+
+.signup-link-txt {
+    color: rgb(0, 0, 79);
+    margin-top: 24px;
+    margin-left: 4%;
+}
+
+.signin-main-btn {
+    width: 40%;
+    padding: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(0, 0, 79);
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 7%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}

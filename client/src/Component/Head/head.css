@@ -1,0 +1,105 @@
+.Container{
+    display:flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.main-head{
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    flex-direction: row;
+    background-color: rgb(0, 0, 79);
+}
+.main-logo{
+    display: flex;
+    height: 110px;
+    padding-left: 5%;
+    cursor: pointer;
+}
+.admin-photo{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-top: 19px;
+    border-radius: 50px;
+    margin-left: 69%;
+    cursor: pointer;
+}
+
+.admin{
+    margin-left: 120%;
+    margin-top: 11px;
+    color: white;
+    font-family: 'Arial';
+    font-size: 15px;
+}
+.side-panel{
+    display: flex;
+    width: 20%;
+    min-height: 82vh;
+    flex-direction: column;
+    background-color: rgb(227, 227, 227);
+    text-align: center;
+}
+.topic-btn {
+    width: 90%;
+    background-color: transparent;
+    color: black;
+    font-size: medium;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: 25px;
+    border-radius: 50px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 2.3%;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: 'Courier New';
+  }
+.dropdown-content a:hover {
+    background-color: yellow;
+    border-radius: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.log-out{
+    flex-direction: row;
+    display: flex;
+    width: 25%;
+}
+.log-icon{ 
+    margin-left: 30%;
+    margin-right: 5px;
+    margin-top: 133px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.lg-out{
+    margin-top: 135px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 79);
+    font-family: 'Lucida Sans';
+    font-weight: 600;
+    font-size: 24px;
+}
+.fot-tag{
+    text-align: center;
+}
+
