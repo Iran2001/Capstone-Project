@@ -1,0 +1,52 @@
+.sickleave-main-big-big-rect{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -118vh;
+    margin-left: 22%;
+}
+
+.big-main-rect-topic{
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+}
+
+.sickleave-mid-big-rect{
+    width: 100%;
+    height: 90vh;
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(227, 227, 227);
+}
+
+.big-mid-rect-topic{
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+}
+
+.sickleave-main-table-rect{
+    width: 90%;
+    height: 75vh;
+    margin-top: -3%;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.sickleave-std-table-rect {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 70vh;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 12px;
+}
+
+
+
+
+
+

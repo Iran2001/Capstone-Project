@@ -1,0 +1,189 @@
+.main-main-main-class{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.top-top-head-bar-rect{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(0, 0, 79);
+    align-items: center;
+}
+.top-question_icon{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 2%;
+    align-items: center;
+}
+
+.top-email_icon{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 5%;
+    padding: 5px;
+    align-items: center;
+}
+
+.top-enroll_icon{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 40%;
+    padding: 5px;
+    width: 35%;
+    align-items: center;
+}
+
+.q-icon{
+    cursor: pointer;
+    width: 40px;
+}
+
+.m-icon{
+    cursor: pointer;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.any-q-txt{
+    font-family: 'Arial';
+    font-size: small;
+    color: white;
+    cursor: pointer;
+    width: 180px;
+    font-weight: 100;
+    margin-left: 2%;
+}
+
+.admin-sup-txt{
+    font-family: 'Arial';
+    font-size: small;
+    color: white;
+    cursor: pointer;
+    width: 180px;
+    margin-left: 2%;
+    font-weight: 100;
+}
+.few-seat-txt{
+    font-family: 'Arial';
+    font-size: small;
+    color: white;
+    cursor: pointer;
+    margin-left: 30%;
+}
+.enroll-now-txt{
+    font-family: 'Arial';
+    font-size: medium;
+    color: rgb(124, 207, 0);
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.top-head-main-bar-rect{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+}
+
+.campus-logo-icon-rect{
+    width: 10%;
+    margin-left: 2%;
+    padding: 5px;
+}
+
+.campus-logo-icon{
+    width: 110%;
+}
+
+.navbar-txt-main-rect{
+    width: 10%;
+    margin-left: 5%;
+}
+.navbar-txt-main-rect1{
+    width: 10%;
+    margin-left: 1%;
+}
+
+.nav-bar-txt{
+    font-family: 'Arial';
+    font-size: medium;
+    color: black;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.talk-expert-rect{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    height: 8vh;
+    margin-left: 2%;
+}
+
+.caller-icon{
+    cursor: pointer;
+    width: 40px;
+    margin-top: 3%;
+}
+
+.talk-expert-txt-rect{
+    text-align: center;
+    padding: 2px;
+}
+
+.talk-expert-txt{
+    font-family: 'Arial';
+    font-weight: 100;
+    color: black;
+    cursor: pointer;
+}
+
+.talk-expert-txt1{
+    font-family: 'Arial';
+    margin-top: -20px;
+    color: black;
+    cursor: pointer;
+}
+
+.Login_in-main-btn {
+    width: 320%;
+    padding: 10px;
+    color: white;
+    font-size: large;
+    background-color: rgb(0, 0, 79);
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -10%;
+    cursor: pointer;
+}
+
+.add-send-btn{
+    margin-top: 40px;
+    margin-left: 73%;
+}
+
+
+
+
+
+
+
+

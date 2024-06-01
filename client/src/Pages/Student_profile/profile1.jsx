@@ -1,6 +1,6 @@
 import React from 'react'
 import './profile1.css';
-import Head from '../../Component/Head/head';
+import Student_head from '../../Component/Student_head/sthead';
 import Button from '@mui/material/Button';
 import EditIcon from '@mui/icons-material/Edit';
 import Stack from '@mui/material/Stack';
@@ -10,7 +10,7 @@ import TextField from '@mui/material/TextField';
 const profile1 = () => {
     return (
         <div>
-            <Head />
+            <Student_head />
             <div className='std-prof-main-big-rect'>
                 <div className='std-prof-big-rect'>
                     <div>
@@ -35,7 +35,7 @@ const profile1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField id="outlined-basic" label="M. A. Heshan Rashmika" variant="standard" />
+                                    <TextField id="outlined-basic" label="User name" variant="standard" />
                                 </Box>
                             </div>
                             <div>
@@ -53,11 +53,11 @@ const profile1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField id="outlined-basic" label="heshan@gmail.com" variant="standard" />
+                                    <TextField id="outlined-basic" label="Email address" variant="standard" />
                                 </Box>
                             </div>
                             <div>
-                                <h2 className='std-prof-head-txt2'>Mobile Number</h2>
+                                <h2 className='std-prof-head-txt2'>Contact Number</h2>
                             </div>
                             <div className='std-prof-txt-field'>
                                 <Box
@@ -71,7 +71,7 @@ const profile1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField id="outlined-basic" label="0786386950" variant="standard" />
+                                    <TextField id="outlined-basic" label="Contact number" variant="standard" />
                                 </Box>
                             </div>
                             <div>
@@ -89,7 +89,7 @@ const profile1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField id="outlined-basic" label="IT Diploma" variant="standard" />
+                                    <TextField id="outlined-basic" label="Course name" variant="standard" />
                                 </Box>
                             </div>
                         </div>
