@@ -1,0 +1,143 @@
+.stpanel-big-rect1 {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -118vh;
+    margin-left: 22%;
+}
+
+.stpanel-top-head1 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+}
+
+.stpanel-xs-main-rect1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 18vh;
+}
+
+.stpanel-xs-rect1 {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    min-height: 12vh;
+    border-radius: 25px;
+    margin-left: 11.5%;
+    margin-top: 20px;
+    background-color: rgb(227, 227, 227);
+}
+
+.stpanel-student1 {
+    font-family: Arial;
+    font-size: 22px;
+    padding-left: 4px;
+    color: rgba(201, 201, 2, 0.99);
+}
+
+.stpanel-std-icon1 {
+    margin-left: 60%;
+    margin-top: -28px;
+    padding: 2px;
+}
+
+.stpanel-quantity1 {
+    font-family: Arial;
+    font-size: 32px;
+    margin-left: 10%;
+    margin-top: -34px;
+}
+
+.stpanel-m-main-rect1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 40vh;
+    margin-top: 5px;
+}
+
+.stpanel-m-rect1 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 32vh;
+    border-radius: 25px;
+    margin-left: 11.5%;
+    margin-top: 60px;
+    padding: 12px;
+    background-color: rgb(227, 227, 227);
+}
+
+.stpanel-tp1 {
+    font-family: Arial;
+    font-size: 22px;
+    padding-left: 4px;
+}
+
+.stpanel-rect-image1 {
+    height: 20vh;
+    margin-left: 7%;
+    padding: 2px;
+}
+
+.stpanel-id-icon11 {
+    position: relative;
+    width: 10%;
+    height: 20px;
+    background-color: rgb(94, 170, 228);
+    margin-top: -130px;
+    margin-left: 65%;
+    border-radius: 2px;
+}
+
+.stpanel-id-icon21 {
+    position: relative;
+    width: 10%;
+    height: 20px;
+    background-color: rgb(228, 94, 107);
+    margin-top: 30px;
+    margin-left: 65%;
+    border-radius: 2px;
+}
+
+.stpanel-id-nm1 {
+    font-family: Arial;
+}
+
+.stpanel-lbl-11 {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.stpanel-lbl-21 {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.stpanel-lbl-icon1 {
+    width: 10%;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.stpanel-lbl-detail1 {
+    font-family: Arial;
+    margin-top: -10px;
+    margin-left: 5%;
+}

@@ -1,0 +1,164 @@
+.stduty-big-rect1 {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: -118vh;
+    margin-left: 22%;
+}
+
+.stduty-top-head1 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+    margin-top: 5%;
+}
+
+.stduty-top-main-rect{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: 100%;
+    height: 45vh;
+}
+
+.stduty-m-rect1 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 32vh;
+    border-radius: 25px;
+    margin-left: 11.5%;
+    margin-top: 60px;
+    padding: 12px;
+    background-color: rgb(227, 227, 227);
+}
+
+.stduty-tp1 {
+    font-family: Arial;
+    font-size: 22px;
+    padding-left: 4px;
+}
+
+.stduty-lbl-11 {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.stduty-lbl-21 {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.stduty-lbl-icon1 {
+    width: 10%;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.stduty-lbl-detail1 {
+    font-family: Arial;
+    margin-top: -10px;
+    margin-left: 5%;
+}
+
+.stduty-bottom-main-rect{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    height: 45vh;
+    margin-top: 5%;
+    align-items: center;
+}
+
+.stduty-bottom-m-rect1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 32vh;
+    border-radius: 25px;
+    margin-left: 5.5%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: rgb(227, 227, 227);
+}
+
+.stduty-bottom-lbl-icon1{
+    width: 5%;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.stduty-bottom-lbl-11 {
+    display: flex;
+    width: 90%;
+    height: 45px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.stduty-bottom-lbl-21 {
+    display: flex;
+    width: 90%;
+    height: 45px;
+    background-color: rgb(192, 192, 192);
+    margin: auto;
+    border-radius: 50px;
+    flex-direction: row;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.stduty-accept-btn{
+    margin-left: 20%;
+    margin-top: 7px
+}
+
+.stduty-reject-btn{
+    margin-left: 5%;
+    margin-top: 7px
+}
+
+.stduty-accept-btn1{
+    margin-left: 28%;
+    margin-top: 7px
+}
+
+.stduty-reject-btn1{
+    margin-left: 5%;
+    margin-top: 7px
+}
+
+.stduty-accept-btn2{
+    margin-left: 28.2%;
+    margin-top: 7px
+}
+
+.stduty-reject-btn2{
+    margin-left: 5%;
+    margin-top: 7px
+}
+
+
+
+
+

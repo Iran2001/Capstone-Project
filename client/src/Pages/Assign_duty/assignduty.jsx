@@ -106,7 +106,7 @@ const assignduty = () => {
                         </Box>
                     </div>
                     <div>
-                        <h2 className='available-std-txt-topic'>Work</h2>
+                        <h2 className='available-std-txt-topic'>Place / Work</h2>
                     </div>
                     <div>
                         <Box
@@ -120,7 +120,7 @@ const assignduty = () => {
                             noValidate
                             autoComplete="off"
                         >
-                            <TextField id="outlined-basic" label="What is the work?" variant="standard" />
+                            <TextField id="outlined-basic" label="What is the place & work?" variant="standard" />
                         </Box>
                     </div>
                     <div>

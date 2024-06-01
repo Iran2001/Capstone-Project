@@ -1,0 +1,88 @@
+.stdhead-Container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.stdhead-main-head {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    flex-direction: row;
+    background-color: rgb(0, 0, 79);
+}
+
+.stdhead-main-logo {
+    display: flex;
+    height: 110px;
+    padding-left: 5%;
+    cursor: pointer;
+}
+
+.stdhead-admin-photo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-top: 19px;
+    border-radius: 50px;
+    margin-left: 69%;
+    cursor: pointer;
+}
+
+.stdhead-admin {
+    margin-left: 120%;
+    margin-top: 11px;
+    color: white;
+    font-family: 'Arial';
+    font-size: 15px;
+}
+
+.stdhead-side-panel {
+    display: flex;
+    width: 20%;
+    min-height: 82vh;
+    flex-direction: column;
+    background-color: rgb(227, 227, 227);
+    text-align: center;
+}
+
+.stdhead-topic-btn {
+    width: 90%;
+    background-color: transparent;
+    color: black;
+    font-size: medium;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: 65px;
+    border-radius: 50px;
+}
+
+.stdhead-log-out {
+    flex-direction: row;
+    display: flex;
+    width: 25%;
+}
+
+.stdhead-log-icon {
+    margin-left: 30%;
+    margin-right: 5px;
+    margin-top: 133px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.stdhead-lg-out {
+    margin-top: 135px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 79);
+    font-family: 'Lucida Sans';
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.stdhead-fot-tag {
+    text-align: center;
+}

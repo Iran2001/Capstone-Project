@@ -17,14 +17,29 @@ import Assign_duty from './Pages/Assign_duty/assignduty'
 import User_profile from './Pages/User_profile/profile'
 import Student_profile from './Pages/Student_profile/profile1'
 import Teacher_profile from './Pages/Teacher_profile/profile2'
+import Home_page from './Pages/Home_page/home'
+import Courses from './Pages/Courses/courses'
+import About_us from './Pages/About_us/aboutus'
+import Contact_us from './Pages/Contact_us/contactus'
+import Sick_leave from './Pages/Sick_leave/sickleave'
+import Leave_request from './Pages/Leave_request/leavereq'
+import Student_panel from './Pages/Student_panel/stpanel'
+import Student_duty from './Pages/Student_duty/stduty'
+import Reject_reason from './Pages/Reject_reason/rejreason'
+import Stdsick_leave from './Pages/Stdsick_leave/stdsicklv'
+import Stdleave_req from './Pages/Stdleave_req/leavereq'
+
+import Homepage_head from './Component/Homepage_head/homepage'
+import Homepage_footer from './Component/Homepage_footer/footer'
 import Head from './Component/Head/head'
 import Sign_side from './Component/Sign_side/side';
+import Student_head from './Component/Student_head/sthead'
 
 
 const App = () => {
   return (
     <div >
-      <User_profile/>
+      <Stdleave_req/>
     </div>
   )
 }

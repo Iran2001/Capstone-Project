@@ -1,0 +1,35 @@
+.course-main-big-big-rect{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    height: 71.5vh;
+    align-items: center;
+}
+
+.course-main-sub-big-rect{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 99%;
+    margin-top: 3%;
+    height: 59vh;
+    align-items: center;
+}
+
+.course-sub-big-rect{
+    margin-left: 8%;
+}
+
+.course-sub-big-rect1{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+
+
+
+
+
+
+
