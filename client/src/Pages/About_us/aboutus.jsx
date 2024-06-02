@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './aboutus.css';
 import Homepage_head from '../../Component/Homepage_head/homepage';
 import Homepage_footer from '../../Component/Homepage_footer/footer';

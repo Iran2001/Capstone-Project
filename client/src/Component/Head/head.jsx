@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './head.css'
 import logoImage1 from '../../assets/Campuslogo1.jpg';
 import logoImage3 from '../../assets/logout.png';
