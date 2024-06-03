@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import{Link,useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './signup.css';
 import Sign_side from '../../Component/Sign_side/side';
@@ -21,6 +21,8 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -67,6 +69,10 @@ const Signup = () => {
         alert('An error occurred. Please try again.');
       }
     }
+  };
+
+  const handleSignInClick = () => {
+    navigate('/signin');
   };
 
   return (
@@ -180,7 +186,7 @@ const Signup = () => {
             </div>
             <div className='already-reg-rect'>
               <h6 className='already-reg-topic'>Already Registered?</h6>
-              <a href='/Sign_in/signin' className='login-link-txt'>Login</a>
+              <a href='/signin' className='login-link-txt'>Login</a>
             </div>
             <div>
               <button type="submit" className='signup-main-btn'>Sign Up</button>
@@ -188,8 +194,7 @@ const Signup = () => {
           </form>
 
           <div>
-            {/* Add signup button here */}
-            <button className='signup-main-btn' onClick={() => {}}>Sign In</button>
+            <button className='signup-main-btn' onClick={handleSignInClick}>Sign In</button>
           </div>
         </div>
       </div>

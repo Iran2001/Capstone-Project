@@ -1,13 +1,18 @@
-
+import React from 'react';
 import './homepage.css';
 import Icon1 from '../../assets/Help.png';
 import Icon2 from '../../assets/envelope.png';
 import Campuslg2 from '../../assets/IUHS-Logo.png';
 import callerIcon2 from '../../assets/phone-call.png';
+import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
+    const navigate = useNavigate();
   
-  
+    const handleLoginClick = () => {
+        navigate('/signup');
+    }
+
     return (
         <div className='main-main-main-class'>
             <div className='top-top-head-bar-rect'>
@@ -67,7 +72,7 @@ const Homepage = () => {
                     </a>
                 </div>
                 <div>
-                    <button className='Login_in-main-btn'>Login</button>
+                    <button className='Login_in-main-btn' onClick={handleLoginClick}>Login</button>
                 </div>
             </div>
         </div>

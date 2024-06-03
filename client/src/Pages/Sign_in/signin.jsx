@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signin.css';
 import Sign_side from '../../Component/Sign_side/side';
 import SignupImg1 from '../../assets/signupphoto.jpg';
@@ -16,6 +17,8 @@ const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -41,6 +44,7 @@ const Signin = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Login successful');
+        navigate('/'); // Navigate to the home page after successful sign-in
       } else {
         alert(`Login failed: ${result.message}`);
       }
