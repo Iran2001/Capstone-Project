@@ -42,7 +42,7 @@ import Student_head from './Component/Student_head/sthead';
 const App = () => {
   return (
     <div>
-      <Stdleave_req />
+      <Homepage_head />
     </div>
   );
 }
