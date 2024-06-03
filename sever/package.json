@@ -29,7 +29,8 @@
   "dotenv": "^16.4.5",
   "express": "^4.19.2",
   "mongoose": "^8.4.0",
-  "mysql": "^2.18.1"
+  "mysql": "^2.18.1",
+  "react-router-dom": "^6.23.1"
  },
  "devDependencies": {
   "nodemon": "^3.1.2"

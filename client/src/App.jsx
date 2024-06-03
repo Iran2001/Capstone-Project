@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 // Importing Pages
 import Admin_dashboard from './Pages/Admin_dashboard/admin';
@@ -41,9 +43,17 @@ import Student_head from './Component/Student_head/sthead';
 
 const App = () => {
   return (
-    <div>
-      <Stdleave_req />
-    </div>
+ 
+<BrowserRouter>
+    <Routes>  
+    <Route path='/' element={<Sign_up/>}></Route>
+    <Route path='/signup' element={<Sign_up/>}></Route>
+    <Route path='/signin' element={<Sign_in/>}></Route>
+   
+    </Routes>
+
+</BrowserRouter>
+
   );
 }
 
