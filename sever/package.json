@@ -1,34 +1,37 @@
 {
  "homePage": "http://Iran2001.github.io/Capston-Project",
-  "name": "my-server-project",
-  "version": "1.0.0",
-  "description": "This is a server for my Capston project",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Iran2001/Capstone-Project.git"
-  },
-  "keywords": [
-    "server",
-    "nodejs",
-    "capstone"
-  ],
-  "author": "Lahiru Iran",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Iran2001/Capstone-Project/issues"
-  },
-  "homepage": "https://github.com/Iran2001/Capstone-Project#readme",
-  "dependencies": {
-    "axios": "^1.6.8",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mongoose": "^8.4.0",
-    "nodemon": "^3.1.0"
-  }
+ "name": "my-server-project",
+ "version": "1.0.0",
+ "description": "This is a server for my Capston project",
+ "main": "index.js",
+ "scripts": {
+  "start": "nodemon src/index.js"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/Iran2001/Capstone-Project.git"
+ },
+ "keywords": [
+  "server",
+  "nodejs",
+  "capstone"
+ ],
+ "author": "Lahiru Iran",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/Iran2001/Capstone-Project/issues"
+ },
+ "homepage": "https://github.com/Iran2001/Capstone-Project#readme",
+ "dependencies": {
+  "axios": "^1.6.8",
+  "body-parser": "^1.20.2",
+  "cors": "^2.8.5",
+  "dotenv": "^16.4.5",
+  "express": "^4.19.2",
+  "mongoose": "^8.4.0",
+  "mysql": "^2.18.1"
+ },
+ "devDependencies": {
+  "nodemon": "^3.1.2"
+ }
 }
