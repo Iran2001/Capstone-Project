@@ -17,6 +17,7 @@
 .top-question_icon{
     display: flex;
     flex-direction: row;
+    word-wrap: normal;
     overflow-x: hidden;
     overflow-y: hidden;
     margin-left: 2%;
@@ -28,7 +29,6 @@
     flex-direction: row;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-left: 5%;
     padding: 5px;
     align-items: center;
 }
@@ -38,21 +38,23 @@
     flex-direction: row;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-left: 40%;
+    margin-left: auto;
     padding: 5px;
-    width: 35%;
+    margin-right: 3%;
     align-items: center;
 }
 
 .q-icon{
     cursor: pointer;
     width: 40px;
+    margin-top: 10px;
 }
 
 .m-icon{
     cursor: pointer;
     width: 50px;
     border-radius: 50px;
+    margin-top: 5px;
 }
 
 .any-q-txt{
@@ -62,7 +64,8 @@
     cursor: pointer;
     width: 180px;
     font-weight: 100;
-    margin-left: 2%;
+    margin-left: 25%;
+    margin-top: -30px;
 }
 
 .admin-sup-txt{
@@ -71,24 +74,23 @@
     color: white;
     cursor: pointer;
     width: 180px;
-    margin-left: 2%;
+    margin-left: 30%;
     font-weight: 100;
+    margin-top: -35px;
 }
 .few-seat-txt{
     font-family: 'Arial';
     font-size: small;
     color: white;
     cursor: pointer;
-    margin-left: 30%;
 }
 .enroll-now-txt{
     font-family: 'Arial';
     font-size: medium;
     color: rgb(124, 207, 0);
     cursor: pointer;
-    margin-left: 2%;
+    padding-left: 5px;
 }
-
 .top-head-main-bar-rect{
     display: flex;
     flex-direction: row;
@@ -123,7 +125,7 @@
     font-size: medium;
     color: black;
     cursor: pointer;
-    margin-left: 5%;
+    margin-left: 6%;
 }
 
 .talk-expert-rect{
@@ -133,18 +135,22 @@
     align-items: center;
     width: 20%;
     height: 8vh;
-    margin-left: 2%;
+    margin-left: 3%;
+    margin-top: 1%;
+    padding-right: 10px;
 }
 
 .caller-icon{
     cursor: pointer;
     width: 40px;
-    margin-top: 3%;
+    margin-top: 10%;
 }
 
 .talk-expert-txt-rect{
     text-align: center;
-    padding: 2px;
+    margin-left: 30%;
+    margin-top: -65px;
+    width: 100%;
 }
 
 .talk-expert-txt{
@@ -169,7 +175,7 @@
     background-color: rgb(0, 0, 79);
     border-radius: 5px;
     border: 1px solid black;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-bottom: 5px;
     margin-left: -10%;
     cursor: pointer;
