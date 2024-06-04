@@ -15,6 +15,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from 'axios';
 
 
+
 const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -78,6 +79,47 @@ const Signin = () => {
     }
   };
 
+const Signin = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const userData = {
+      username,
+      password,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      const result = await response.json();
+      if (response.ok) {
+        alert('Login successful');
+        navigate('/student-panel'); // Navigate to the student panel after successful sign-in
+      } else {
+        alert(`Login failed: ${result.message}`);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    }
+  };
+
   return (
     <div>
       <Sign_side />
@@ -105,10 +147,13 @@ const Signin = () => {
                     label=""
                     variant="standard"
                     value={username}
+
                     onChange={handleUsernameChange}
                     fullWidth
                     error={Boolean(usernameError)}
                     helperText={<span style={{ color: 'red', fontSize: '12px' }}>{usernameError}</span>}
+                    onChange={(e) => setUsername(e.target.value)}
+                    fullWidth
                   />
                 </Box>
               </div>
@@ -116,6 +161,7 @@ const Signin = () => {
                 <div className='pass-sub-text-rect-in'>
                   <h6 className='txt-field-topic1-in'>Password:</h6>
                   <div className='fieldsty-in1'>
+                  <div className='fieldsty-in'>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
                       <FormControl variant="standard" fullWidth>
                         <InputLabel htmlFor="password"></InputLabel>
@@ -124,6 +170,7 @@ const Signin = () => {
                           type={showPassword ? 'text' : 'password'}
                           value={password}
                           onChange={handlePasswordChange}
+                          onChange={(e) => setPassword(e.target.value)}
                           endAdornment={
                             <InputAdornment position="end">
                               <IconButton
@@ -140,6 +187,9 @@ const Signin = () => {
                       </FormControl>
                     </Box>
                     {passwordError && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{passwordError}</span>}
+                        />
+                      </FormControl>
+                    </Box>
                   </div>
                 </div>
               </div>
@@ -153,6 +203,14 @@ const Signin = () => {
             </div>
             <div>
               <button type="submit" className='signin-main-btn'><a href='/student' className='signin-main-btn-clr'>Sign In</a></button>
+              <a className='already-reg-btn-in' href='/signup'>
+                Register Now
+              </a>
+            </div>
+            <div className='signin-btn-rect'>
+              <button className='signin-btn-main' type='submit'>
+                <span className='signin-btn-text'>Sign In</span>
+              </button>
             </div>
           </form>
         </div>
@@ -162,3 +220,4 @@ const Signin = () => {
 }
 
 export default Signin;
+};

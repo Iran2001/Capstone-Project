@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './signup.css';
 import Sign_side from '../../Component/Sign_side/side';
-import SignupImg from '../../assets/signupphoto.jpg';
+import SignupImg1 from '../../assets/signupphoto.jpg';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
@@ -57,6 +57,9 @@ const Signup = () => {
       setEmailError('');
     }
   };
+  const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   const handlePasswordChange = (e) => {
     const value = e.target.value;
@@ -100,6 +103,10 @@ const Signup = () => {
         navigate('/signin'); // Navigate to the sign-in page after successful sign-up
       } else {
         alert(`Sign up failed: ${result.message}`);
+        alert('Signup successful');
+        navigate('/signin'); // Navigate to the sign-in page after successful signup
+      } else {
+        alert(`Signup failed: ${result.message}`);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -113,6 +120,7 @@ const Signup = () => {
       <div className='signup-main-big-rect'>
         <div className='signup-main-photo1'>
           <img src={SignupImg} alt="Signup" className='signup-image' />
+          <img src={SignupImg1} alt="Signup" className='signup-image' />
         </div>
         <div className='signup-main-form-1'>
           <div>
@@ -120,6 +128,7 @@ const Signup = () => {
           </div>
           <div>
             <h6 className='signup-sub-min-topic'>Enter your details to create an account</h6>
+            <h6 className='signup-sub-min-topic'>Sign up for an account</h6>
           </div>
           <div>
             <h3 className='signup-sub-main-topic'>Sign Up</h3>
@@ -128,6 +137,8 @@ const Signup = () => {
             <div>
               <h6 className='txt-field-topic'>User Name:</h6>
               <div className='fieldsty'>
+              <h6 className='txt-field-topic-in'>User Name:</h6>
+              <div className='fieldsty-in'>
                 <Box component="div" sx={{ display: 'flex', flexWrap: 'wrap' }}>
                   <TextField
                     id="username"
@@ -143,6 +154,13 @@ const Signup = () => {
               </div>
               <h6 className='txt-field-topic'>Email:</h6>
               <div className='fieldsty'>
+                    onChange={(e) => setUsername(e.target.value)}
+                    fullWidth
+                  />
+                </Box>
+              </div>
+              <h6 className='txt-field-topic-in'>Email:</h6>
+              <div className='fieldsty-in'>
                 <Box component="div" sx={{ display: 'flex', flexWrap: 'wrap' }}>
                   <TextField
                     id="email"
@@ -196,6 +214,23 @@ const Signup = () => {
                           type={showPassword ? 'text' : 'password'}
                           value={confirmPassword}
                           onChange={handleConfirmPasswordChange}
+                    onChange={(e) => setEmail(e.target.value)}
+                    fullWidth
+                  />
+                </Box>
+              </div>
+              <div className='pass-main-text-rect-in'>
+                <div className='pass-sub-text-rect-in'>
+                  <h6 className='txt-field-topic1-in'>Password:</h6>
+                  <div className='fieldsty-in'>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                      <FormControl variant="standard" fullWidth>
+                        <InputLabel htmlFor="password"></InputLabel>
+                        <Input
+                          id="password"
+                          type={showPassword ? 'text' : 'password'}
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                           endAdornment={
                             <InputAdornment position="end">
                               <IconButton
@@ -220,6 +255,16 @@ const Signup = () => {
             </div>
             <div>
               <button type="submit" className='signup-main-btn'>Sign Up</button>
+            <div className='already-reg-rect-in'>
+              <h6 className='already-reg-topic-in'>Already have an account?</h6>
+              <a className='already-reg-btn-in' href='/signin'>
+                Sign In
+              </a>
+            </div>
+            <div className='signup-btn-rect'>
+              <button className='signup-btn-main' type='submit'>
+                <span className='signup-btn-text'>Sign Up</span>
+              </button>
             </div>
           </form>
         </div>

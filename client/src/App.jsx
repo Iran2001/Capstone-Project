@@ -44,7 +44,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path='/home' element={<Home_page />} />
+        <Route path='/' element={<Home_page />} />
         <Route path='/signup' element={<Sign_up />} />
         <Route path='/signin' element={<Sign_in />} />
         <Route path='/resetpsw' element={<Reset_psw />} />
