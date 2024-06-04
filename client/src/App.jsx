@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 // Importing Pages
 import Admin_dashboard from './Pages/Admin_dashboard/admin';
 import Student_dashboard from './Pages/Student_dashboard/student';
@@ -43,18 +42,40 @@ import Student_head from './Component/Student_head/sthead';
 
 const App = () => {
   return (
- 
-<BrowserRouter>
-    <Routes>  
-
-    <Route path='/' element={<Home_page/>}></Route>
-    <Route path='/signup' element={<Sign_up/>}></Route>
-    <Route path='/signin' element={<Sign_in/>}></Route>
-   
-    </Routes>
-
-</BrowserRouter>
-
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home_page />} />
+        <Route path='/signup' element={<Sign_up />} />
+        <Route path='/signin' element={<Sign_in />} />
+        <Route path='/resetpsw' element={<Reset_psw />} />
+        <Route path='/admin-reset-pwd' element={<AdminReset_pwd />} />
+        <Route path='/admin-dashboard' element={<Admin_dashboard />} />
+        <Route path='/student-dashboard' element={<Student_dashboard />} />
+        <Route path='/student-list' element={<Student_list />} />
+        <Route path='/student-add' element={<Student_add />} />
+        <Route path='/student-edit' element={<Student_edit />} />
+        <Route path='/teacher-list' element={<Teacher_list />} />
+        <Route path='/teacher-add' element={<Teacher_add />} />
+        <Route path='/teacher-edit' element={<Teacher_edit />} />
+        <Route path='/course-list' element={<Course_list />} />
+        <Route path='/course-add' element={<Course_add />} />
+        <Route path='/course-edit' element={<Course_edit />} />
+        <Route path='/assign-duty' element={<Assign_duty />} />
+        <Route path='/user-profile' element={<User_profile />} />
+        <Route path='/student-profile' element={<Student_profile />} />
+        <Route path='/teacher-profile' element={<Teacher_profile />} />
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/about-us' element={<About_us />} />
+        <Route path='/contact-us' element={<Contact_us />} />
+        <Route path='/sick-leave' element={<Sick_leave />} />
+        <Route path='/leave-request' element={<Leave_request />} />
+        <Route path='/student-panel' element={<Student_panel />} />
+        <Route path='/student-duty' element={<Student_duty />} />
+        <Route path='/reject-reason' element={<Reject_reason />} />
+        <Route path='/student-sick-leave' element={<Stdsick_leave />} />
+        <Route path='/student-leave-request' element={<Stdleave_req />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -44,7 +44,7 @@ const Signin = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Login successful');
-        navigate('/'); // Navigate to the home page after successful sign-in
+        navigate('/student-panel'); // Navigate to the student panel after successful sign-in
       } else {
         alert(`Login failed: ${result.message}`);
       }
@@ -121,16 +121,20 @@ const Signin = () => {
             </div>
             <div className='already-reg-rect-in'>
               <h6 className='already-reg-topic-in'>Don't have an account?</h6>
-              <a href='/Sign_up/signup' className='signup-link-txt'>Sign Up</a>
+              <a className='already-reg-btn-in' href='/signup'>
+                Register Now
+              </a>
             </div>
-            <div>
-              <button type="submit" className='signin-main-btn'>Sign In</button>
+            <div className='signin-btn-rect'>
+              <button className='signin-btn-main' type='submit'>
+                <span className='signin-btn-text'>Sign In</span>
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Signin;
