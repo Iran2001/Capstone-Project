@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './side.css'
 import lg1 from '../../assets/Campuslogo1.jpg';
 
