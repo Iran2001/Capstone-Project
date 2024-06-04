@@ -5,8 +5,8 @@ import lg1 from '../../assets/Campuslogo1.jpg';
 const side = () => {
 
   const lgs1 = {
-    width: '50%',
-    height: '150px',
+    width: '40%',
+    height: '130px',
   };
 
   return (

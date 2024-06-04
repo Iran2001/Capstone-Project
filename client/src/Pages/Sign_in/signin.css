@@ -1,6 +1,6 @@
+/* Base styles */
 .signin-main-big-rect {
     display: flex;
-    overflow-x: hidden;
     flex-direction: row;
     margin-top: -90vh;
     margin-left: 24%;
@@ -54,10 +54,9 @@
     font-weight: 100;
     margin-bottom: 10px;
     margin-left: 2.5%;
-
 }
 
-.pass-main-text-rect-in{
+.pass-main-text-rect-in {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -73,14 +72,8 @@
     font-size: 12px;
     font-weight: 500;
     margin-left: 3%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
-
-.shared-box-width {
-    width: 230px; /* Adjust this value to your desired width */
-    /* Add other styles for the boxes if needed (e.g., margin, padding) */
-  }
-  
 
 .txt-field-topic1-in {
     font-family: 'Lucida Sans';
@@ -93,6 +86,11 @@
 .fieldsty-in {
     margin-bottom: -10px;
 }
+.fieldsty-in1 {
+    width: 100%;
+    margin-bottom: -10px;
+    margin-top: -13px;
+}
 
 .forgot-psw-rect-in {
     display: flex;
@@ -100,7 +98,7 @@
     width: 75%;
     color: rgb(0, 0, 79);
     text-align: center;
-    margin-left: 24%;
+    margin-left: 1%;
     margin-top: -35px;
     cursor: pointer;
 }
@@ -116,12 +114,12 @@
 .already-reg-rect-in {
     display: flex;
     flex-direction: row;
-    width: 50%;
-    height: 80vh;
+    width: 55%;
+    height: 10vh;
     border-radius: 20px;
     color: black;
     text-align: center;
-    margin-left: 5%;
+    margin-left: 25%;
     margin-top: 20px;
 }
 
@@ -147,8 +145,95 @@
     background-color: rgb(0, 0, 79);
     border-radius: 5px;
     border: 1px solid black;
-    margin-left: 7%;
+    margin-left: 29%;
     margin-top: 20px;
     margin-bottom: 5px;
     cursor: pointer;
+}
+.signin-main-btn-clr{
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive styles */
+
+/* For large screens (desktops) */
+@media (max-width: 1200px) {
+    .signin-main-big-rect {
+        margin-left: 15%;
+        width: 80%;
+    }
+    .signin-main-photo1, .signin-main-form-1 {
+        width: 45%;
+    }
+    .signin-main-form-1 {
+        margin-top: 50px;
+    }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+    .signin-main-big-rect {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+        width: 71.7%;
+        height: auto;
+        margin-top: -140vh;
+        margin-left: 24%;
+    }
+    .signin-main-photo1, .signin-main-form-1 {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .signin-main-photo1 {
+        height: auto;
+    }
+    .signin-main-form-1 {
+        height: auto;
+    }
+    .forgot-psw-rect-in {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .already-reg-rect-in {
+        width: 80%;
+        margin-left: 25%;
+    }
+    .signin-main-btn{
+        margin-bottom: 40px;
+        margin-top: -20px;
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .signin-main-big-rect {
+        margin-left: 5%;
+        width: 90%;
+    }
+    .signin-main-photo1, .signin-main-form-1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .signin-main-photo1 {
+        height: auto;
+    }
+    .signin-main-form-1 {
+        height: auto;
+    }
+    .signin-main-btn {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .forgot-psw-rect-in {
+        width: 100%;
+        margin-left: 0;
+    }
+    .already-reg-rect-in {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
