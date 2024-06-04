@@ -12,11 +12,15 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import axios from 'axios';
+
 
 const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
 
   const navigate = useNavigate();
 
@@ -24,6 +28,26 @@ const Signin = () => {
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
+  };
+
+  const handleUsernameChange = (e) => {
+    const value = e.target.value;
+    if (/^[A-Za-z]*\s*[A-Za-z]*$/.test(value) || value === '') {
+      setUsername(value);
+      setUsernameError('');
+    } else {
+      setUsernameError('Username can only contain letters with spaces between them.');
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    const value = e.target.value;
+    if (/^[A-Z][A-Za-z\d!@#$%^&*()_+]{0,}$/.test(value) || value === '') {
+      setPassword(value);
+      setPasswordError('');
+    } else {
+      setPasswordError('Password must start with a capital letter and be at least 8 characters long.');
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -44,7 +68,7 @@ const Signin = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Login successful');
-        navigate('/student-panel'); // Navigate to the student panel after successful sign-in
+        navigate('/'); // Navigate to the home page after successful sign-in
       } else {
         alert(`Login failed: ${result.message}`);
       }
@@ -81,15 +105,17 @@ const Signin = () => {
                     label=""
                     variant="standard"
                     value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={handleUsernameChange}
                     fullWidth
+                    error={Boolean(usernameError)}
+                    helperText={<span style={{ color: 'red', fontSize: '12px' }}>{usernameError}</span>}
                   />
                 </Box>
               </div>
               <div className='pass-main-text-rect-in'>
                 <div className='pass-sub-text-rect-in'>
                   <h6 className='txt-field-topic1-in'>Password:</h6>
-                  <div className='fieldsty-in'>
+                  <div className='fieldsty-in1'>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
                       <FormControl variant="standard" fullWidth>
                         <InputLabel htmlFor="password"></InputLabel>
@@ -97,7 +123,7 @@ const Signin = () => {
                           id="password"
                           type={showPassword ? 'text' : 'password'}
                           value={password}
-                          onChange={(e) => setPassword(e.target.value)}
+                          onChange={handlePasswordChange}
                           endAdornment={
                             <InputAdornment position="end">
                               <IconButton
@@ -109,9 +135,11 @@ const Signin = () => {
                               </IconButton>
                             </InputAdornment>
                           }
+                          error={Boolean(passwordError)}
                         />
                       </FormControl>
                     </Box>
+                    {passwordError && <span className="error-text" style={{ color: 'red', fontSize: '12px' }}>{passwordError}</span>}
                   </div>
                 </div>
               </div>
@@ -121,20 +149,16 @@ const Signin = () => {
             </div>
             <div className='already-reg-rect-in'>
               <h6 className='already-reg-topic-in'>Don't have an account?</h6>
-              <a className='already-reg-btn-in' href='/signup'>
-                Register Now
-              </a>
+              <a href='/signup' className='signup-link-txt'>Sign Up</a>
             </div>
-            <div className='signin-btn-rect'>
-              <button className='signin-btn-main' type='submit'>
-                <span className='signin-btn-text'>Sign In</span>
-              </button>
+            <div>
+              <button type="submit" className='signin-main-btn'><a href='/student' className='signin-main-btn-clr'>Sign In</a></button>
             </div>
           </form>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Signin;

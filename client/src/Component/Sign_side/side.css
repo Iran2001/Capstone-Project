@@ -1,12 +1,14 @@
-.side-main-main--big-rect{
-    display:flex;
+/* Base styles */
+.side-main-main--big-rect {
+    display: flex;
     flex-direction: row;
     overflow-x: hidden;
     max-height: 100px;
     width: 100%;
 }
-.side-main-rect1{
-    display:flex;
+
+.side-main-rect1 {
+    display: flex;
     flex-direction: row;
     overflow-x: hidden;
     background-color: rgba(201, 201, 2, 0.99);
@@ -15,8 +17,9 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.side-sub-rect2{
-    display:flex;
+
+.side-sub-rect2 {
+    display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 79);
     min-height: 97.8vh;
@@ -24,9 +27,52 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.main-main-logo{
+
+.main-main-logo {
     display: flex;
     height: 110px;
     padding-left: 10%;
     cursor: pointer;
+}
+
+/* Responsive styles */
+
+/* For large screens (desktops) */
+@media (max-width: 1200px) {
+    .side-main-rect1, .side-sub-rect2 {
+        width: 40%;
+    }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+    .side-main-main--big-rect {
+        flex-direction: column;
+    }
+    .side-main-rect1 {
+        width: 30%;
+        min-height: auto;
+        height: 150vh;
+    }
+    .side-sub-rect2 {
+        width: 80%;
+        min-height: auto;
+        height: 150vh;
+    }
+    .main-main-logo{
+        width: 170%;
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .side-main-rect1, .side-sub-rect2 {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        border-radius: 0;
+    }
+    .side-sub-rect2 {
+        margin-top: 10px;
+    }
 }

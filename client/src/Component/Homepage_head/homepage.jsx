@@ -10,7 +10,22 @@ const Homepage = () => {
     const navigate = useNavigate();
   
     const handleLoginClick = () => {
+        navigate('/signin');
+    }
+    const handleEnrollNowClick = () => {
         navigate('/signup');
+    }
+    const handleConatctUSClick = () => {
+        navigate('/contact-us');
+    }
+    const handleMainHomeClick = () => {
+        navigate('/home');
+    }
+    const handleCourseClick = () => {
+        navigate('/courses');
+    }
+    const handleAboutUsClick = () => {
+        navigate('/about-us');
     }
 
     return (
@@ -19,7 +34,7 @@ const Homepage = () => {
                 <div className='top-question_icon'>
                     <a href='#'>
                         <img src={Icon1} className='q-icon' />
-                        <h5 className='any-q-txt'>Have any questions</h5>
+                        <h5 className='any-q-txt' onClick={handleConatctUSClick}>Have any questions</h5>
                     </a>
                 </div>
                 <div className='top-email_icon'>
@@ -31,7 +46,7 @@ const Homepage = () => {
                 <div className='top-enroll_icon'>
                     <h5 className='few-seat-txt'>Only Few Seats Left -</h5>
                     <a href='#'>
-                        <h5 className='enroll-now-txt'>Enroll Now</h5>
+                        <h5 className='enroll-now-txt' onClick={handleEnrollNowClick}>Enroll Now</h5>
                     </a>
                 </div>
             </div>
@@ -44,22 +59,22 @@ const Homepage = () => {
                 </div>
                 <div className='navbar-txt-main-rect'>
                     <a href='#'>
-                        <h5 className='nav-bar-txt'>Home</h5>
+                        <h5 className='nav-bar-txt' onClick={handleMainHomeClick}>Home</h5>
                     </a>
                 </div>
                 <div className='navbar-txt-main-rect1'>
                     <a href='#'>
-                        <h5 className='nav-bar-txt'>Course</h5>
+                        <h5 className='nav-bar-txt' onClick={handleCourseClick}>Course</h5>
                     </a>
                 </div>
                 <div className='navbar-txt-main-rect1'>
                     <a href='#'>
-                        <h5 className='nav-bar-txt'>About Us</h5>
+                        <h5 className='nav-bar-txt' onClick={handleAboutUsClick}>About Us</h5>
                     </a>
                 </div>
                 <div className='navbar-txt-main-rect1'>
                     <a href='#'>
-                        <h5 className='nav-bar-txt'>Contact Us</h5>
+                        <h5 className='nav-bar-txt' onClick={handleConatctUSClick}>Contact Us</h5>
                     </a>
                 </div>
                 <div className='talk-expert-rect'>

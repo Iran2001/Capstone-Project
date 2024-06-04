@@ -1,6 +1,6 @@
+/* Base styles */
 .signup-main-big-rect {
     display: flex;
-    overflow-x: hidden;
     flex-direction: row;
     margin-top: -90vh;
     margin-left: 24%;
@@ -54,10 +54,9 @@
     font-weight: 100;
     margin-bottom: 10px;
     margin-left: 2.5%;
-
 }
 
-.pass-main-text-rect{
+.pass-main-text-rect {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -81,19 +80,35 @@
     font-size: 12px;
     font-weight: 500;
     margin-left: 7%;
-    margin-bottom: 5px;
+    margin-bottom: -10px;
+}
+.txt-field-topic2 {
+    font-family: 'Lucida Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 17%;
+    margin-bottom: -10px;
 }
 
 .fieldsty {
     margin-bottom: -10px;
+    width:100%;
 }
-
+.fieldsty1 {
+    margin-bottom: -10px;
+    width:90%;
+}
+.fieldsty2 {
+    margin-bottom: -10px;
+    width:90%;
+    margin-left: 10%;
+}
 
 .already-reg-rect {
     display: flex;
     flex-direction: row;
     width: 55%;
-    height: 80vh;
+    height: 10vh;
     border-radius: 20px;
     color: black;
     text-align: center;
@@ -125,4 +140,70 @@
     margin-left: 32%;
     margin-top: 20px;
     margin-bottom: 5px;
+}
+
+/* Responsive styles */
+
+/* For large screens (desktops) */
+@media (max-width: 1200px) {
+    .signup-main-big-rect {
+        margin-left: 15%;
+        width: 80%;
+    }
+    .signup-main-photo1, .signup-main-form-1 {
+        width: 45%;
+    }
+    .signup-main-form-1 {
+        margin-top: 50px;
+    }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+    .signup-main-big-rect {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+        width: 71.7%;
+        height: auto;
+        margin-top: -143vh;
+        margin-left: 24%;
+    }
+    .signup-main-photo1, .signup-main-form-1 {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .signup-main-photo1 {
+        height: auto;
+    }
+    .signup-main-form-1 {
+        height: auto;
+    }
+    .signup-main-btn{
+        margin-bottom: 30px;
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .signup-main-big-rect {
+        margin-left: 5%;
+        width: 90%;
+    }
+    .signup-main-photo1, .signup-main-form-1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .signup-main-photo1 {
+        height: auto;
+    }
+    .signup-main-form-1 {
+        height: auto;
+    }
+    .signup-main-btn {
+        width: 80%;
+        margin-left: 10%;
+    }
 }

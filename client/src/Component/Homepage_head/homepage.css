@@ -17,11 +17,11 @@
 .top-question_icon{
     display: flex;
     flex-direction: row;
-    word-wrap: normal;
     overflow-x: hidden;
     overflow-y: hidden;
     margin-left: 2%;
-    align-items: center;
+    width: 180px;
+    align-items:center;
 }
 
 .top-email_icon{
@@ -44,15 +44,27 @@
     align-items: center;
 }
 
+.top-question_icon a,
+.top-email_icon a,
+.top-enroll_icon a,
+.navbar-txt-main-rect a,
+.navbar-txt-main-rect1 a,
+.talk-expert-txt-rect a{
+    text-decoration: none; /* Removes the underline */
+}
+
+
 .q-icon{
     cursor: pointer;
     width: 40px;
+    margin-top: 8%;
 }
 
 .m-icon{
     cursor: pointer;
     width: 50px;
     border-radius: 50px;
+    margin-top: 3%;
 }
 
 .any-q-txt{
@@ -60,8 +72,10 @@
     font-size: small;
     color: white;
     cursor: pointer;
-    width: 180px;
+    width: 120px;
     font-weight: 100;
+    margin-top: -30px;
+    margin-left: 35%;
 }
 
 .admin-sup-txt{
@@ -71,6 +85,8 @@
     cursor: pointer;
     width: 180px;
     font-weight: 100;
+    margin-top: -36px;
+    margin-left: 30%;
 }
 .few-seat-txt{
     font-family: 'Arial';
@@ -136,12 +152,15 @@
 .caller-icon{
     cursor: pointer;
     width: 40px;
+    margin-top: 20%;
 }
 
 .talk-expert-txt-rect{
     text-align: center;
     width: 100%;
     margin-right: 30%;
+    margin-top: -65px;
+    margin-left: 35%
 }
 
 .talk-expert-txt{
@@ -168,16 +187,28 @@
     border: 1px solid black;
     margin-top: 7px;
     margin-bottom: 5px;
-    margin-left: -10%;
+    margin-left: 90%;
     cursor: pointer;
 }
 
-.add-send-btn{
-    margin-top: 40px;
-    margin-left: 73%;
+@media screen and (max-width: 1200px) {
+    .Login_in-main-btn {
+        width: 80%; /* Adjust width for smaller screens */
+    }
 }
 
+@media screen and (max-width: 768px) {
+    .Login_in-main-btn {
+        width: 150%; 
+        margin-left: 30%;/* Adjust width for tablets */
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .Login_in-main-btn {
+        width: 95%; /* Adjust width for mobile devices */
+    }
+}
 
 
 
