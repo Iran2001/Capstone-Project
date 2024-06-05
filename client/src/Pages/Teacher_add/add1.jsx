@@ -14,6 +14,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import SaveIcon from '@mui/icons-material/Save';
 
+
 const add1 = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [formValues, setFormValues] = useState({
@@ -38,6 +39,38 @@ const add1 = () => {
         module: '',
         password: '',
     });
+
+const Add1 = () => {
+    const [formData, setFormData] = useState({
+        lname: '',
+        gender: '',
+        age: '',
+        lnumber: '',
+        module: '',
+        username: '',
+        email: '',
+        password: ''
+    });
+
+    const [formErrors, setFormErrors] = useState({
+        lname: false,
+        gender: false,
+        age: false,
+        lnumber: false,
+        module: false,
+        username: false,
+        email: false,
+        password: false
+    });
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+        validateField(name, value);
+    };
+
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -119,6 +152,70 @@ const add1 = () => {
     const handleSubmit = () => {
         // Add your submit logic here
         console.log(formValues);
+
+    const validateField = (name, value) => {
+        // Basic validation example, you can add more complex validations as needed
+        if (value.trim() === '') {
+            setFormErrors({ ...formErrors, [name]: true });
+        } else {
+            setFormErrors({ ...formErrors, [name]: false });
+        }
+    };
+
+    const resetForm = () => {
+        setFormData({
+            lname: '',
+            gender: '',
+            age: '',
+            lnumber: '',
+            module: '',
+            username: '',
+            email: '',
+            password: ''
+        });
+        setFormErrors({
+            lname: false,
+            gender: false,
+            age: false,
+            lnumber: false,
+            module: false,
+            username: false,
+            email: false,
+            password: false
+        });
+    };
+
+    const handleSubmit = () => {
+        // Check if any field has errors
+        const hasErrors = Object.values(formErrors).some(error => error);
+        if (!hasErrors) {
+            // Submit the form
+            fetch('http://localhost:5000/api/teachers', { // Ensure this URL matches your backend URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Teacher added successfully');
+                    resetForm(); // Reset the form after successful submission
+                    // You can handle success here, like showing a success message or redirecting
+                } else {
+                    console.error('Error adding teacher to database');
+                    // Handle error response from the server
+                }
+            })
+            .catch(error => {
+                console.error('Error adding teacher to database:', error);
+                // Handle network errors or other exceptions
+            });
+        } else {
+            console.error('Form has errors. Cannot submit.');
+            // Handle form errors
+        }
+
     };
 
     return (
@@ -139,7 +236,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -147,6 +244,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="lectureId"
                                         label="Lecture ID"
@@ -155,6 +253,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.lectureId)}
                                         helperText={errors.lectureId}
+
+                                    <TextField 
+                                        id="lname" 
+                                        name="lname" 
+                                        label="Lecture Name" 
+                                        variant="standard" 
+                                        value={formData.lname} 
+                                        onChange={handleChange} 
+                                        error={formErrors.lname}
+
                                     />
                                 </Box>
                             </div>
@@ -162,7 +270,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -170,6 +278,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="age"
                                         label="Age"
@@ -178,6 +287,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.age)}
                                         helperText={errors.age}
+
+                                    <TextField 
+                                        id="age" 
+                                        name="age" 
+                                        label="Age" 
+                                        variant="standard" 
+                                        value={formData.age} 
+                                        onChange={handleChange} 
+                                        error={formErrors.age}
+
                                     />
                                 </Box>
                             </div>
@@ -185,7 +304,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -193,6 +312,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="loginUserName"
                                         label="Login User Name"
@@ -201,6 +321,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.loginUserName)}
                                         helperText={errors.loginUserName}
+
+                                    <TextField 
+                                        id="username" 
+                                        name="username" 
+                                        label="Username" 
+                                        variant="standard" 
+                                        value={formData.username} 
+                                        onChange={handleChange} 
+                                        error={formErrors.username}
+
                                     />
                                 </Box>
                             </div>
@@ -211,7 +341,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -219,6 +349,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="name"
                                         label="Name"
@@ -227,6 +358,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.name)}
                                         helperText={errors.name}
+
+                                    <TextField 
+                                        id="lnumber" 
+                                        name="lnumber" 
+                                        label="Lecture Number" 
+                                        variant="standard" 
+                                        value={formData.lnumber} 
+                                        onChange={handleChange} 
+                                        error={formErrors.lnumber}
+
                                     />
                                 </Box>
                             </div>
@@ -234,7 +375,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -242,6 +383,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="contactNumber"
                                         label="Contact Number"
@@ -250,6 +392,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.contactNumber)}
                                         helperText={errors.contactNumber}
+
+                                    <TextField 
+                                        id="module" 
+                                        name="module" 
+                                        label="Module" 
+                                        variant="standard" 
+                                        value={formData.module} 
+                                        onChange={handleChange} 
+                                        error={formErrors.module}
+
                                     />
                                 </Box>
                             </div>
@@ -257,7 +409,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -265,6 +417,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="email"
                                         label="Email"
@@ -273,6 +426,16 @@ const add1 = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.email)}
                                         helperText={errors.email}
+
+                                    <TextField 
+                                        id="email" 
+                                        name="email" 
+                                        label="Email" 
+                                        variant="standard" 
+                                        value={formData.email} 
+                                        onChange={handleChange} 
+                                        error={formErrors.email}
+
                                     />
                                 </Box>
                             </div>
@@ -283,7 +446,7 @@ const add1 = () => {
                                 <Box
                                     component="form"
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
@@ -291,6 +454,7 @@ const add1 = () => {
                                     noValidate
                                     autoComplete="off"
                                 >
+
                                     <TextField
                                         id="gender"
                                         label="Gender"
@@ -306,20 +470,30 @@ const add1 = () => {
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </TextField>
+
+                                    <TextField 
+                                        id="gender" 
+                                        name="gender" 
+                                        label="Gender" 
+                                        variant="standard" 
+                                        value={formData.gender} 
+                                        onChange={handleChange} 
+                                        error={formErrors.gender}
+                                    />
+
                                 </Box>
                             </div>
                             <div>
-                                <Box
-                                    component="form"
+                                <FormControl
                                     sx={{
-                                        marginTop: 7, // Add margin-top: 20px
+                                        marginTop: 7,
                                         backgroundColor: 'rgb(188, 187, 187)',
                                         borderRadius: 4,
                                         '& > :not(style)': { m: 1, width: '90%' },
                                     }}
-                                    noValidate
-                                    autoComplete="off"
+                                    variant="standard"
                                 >
+
                                     <TextField
                                         id="module"
                                         label="Module"
@@ -368,10 +542,46 @@ const add1 = () => {
                                         </FormControl>
                                     </div>
                                 </Box>
+
+                                    <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                                    <Input
+                                        id="standard-adornment-password"
+                                        name="password"
+                                        type={showPassword ? 'text' : 'password'}
+                                        value={formData.password}
+                                        onChange={handleChange}
+                                        error={formErrors.password}
+                                        endAdornment={
+                                            <InputAdornment position="end">
+                                                <IconButton
+                                                    aria-label="toggle password visibility"
+                                                    onClick={handleClickShowPassword}
+                                                    onMouseDown={handleMouseDownPassword}
+                                                >
+                                                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                                                </IconButton>
+                                            </InputAdornment>
+                                        }
+                                    />
+                                </FormControl>
+                            </div>
+                            <div>
+                                <Stack direction="row" spacing={2}>
+                                    <Button 
+                                        variant="contained" 
+                                        endIcon={<SaveIcon />} 
+                                        sx={{ width: 130, height: 40, borderRadius: 4 }}
+                                        onClick={handleSubmit}
+                                    >
+                                        Add
+                                    </Button>
+                                </Stack>
+
                             </div>
                         </div>
 
                     </div>
+
                     <div className='add-save-btn6'>
                         <Stack direction="row" spacing={4}>
                             <Button
@@ -385,10 +595,13 @@ const add1 = () => {
                             </Button>
                         </Stack>
                     </div>
+
                 </div>
             </div>
         </div>
     );
+
+}
 }
 
 export default add1;

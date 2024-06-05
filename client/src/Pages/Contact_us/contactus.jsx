@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './contactus.css';
 import Homepage_head from '../../Component/Homepage_head/homepage';
@@ -6,7 +7,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import SaveIcon from '@mui/icons-material/Send';
+import SaveIcon from '@mui/icons-material/send';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -39,8 +40,7 @@ const ContactUs = () => {
         }
         break;
       case 'email':
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailRegex.test(value)) {
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
           setErrors({ ...errors, [id]: '' });
         } else {
           setErrors({ ...errors, [id]: 'Email is not valid.' });

@@ -14,6 +14,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import SaveIcon from '@mui/icons-material/Save';
 
+
 const add = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [formValues, setFormValues] = useState({
@@ -39,11 +40,46 @@ const add = () => {
         password: '',
     });
 
+const Add = () => {
+    const [formData, setFormData] = useState({
+        fname: '',
+        lname: '',
+        gender: '',
+        age: '',
+        email: '',
+        pnumber: '',
+        cname: '',
+        aid: '',
+        password: ''
+    });
+
+    const [formErrors, setFormErrors] = useState({
+        fname: false,
+        lname: false,
+        gender: false,
+        age: false,
+        email: false,
+        pnumber: false,
+        cname: false,
+        aid: false,
+        password: false
+    });
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+        validateField(name, value);
+    };
+
+
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -116,6 +152,72 @@ const add = () => {
     const handleSubmit = () => {
         // Add your submit logic here
         console.log(formValues);
+
+    const validateField = (name, value) => {
+        // Basic validation example, you can add more complex validations as needed
+        if (value.trim() === '') {
+            setFormErrors({ ...formErrors, [name]: true });
+        } else {
+            setFormErrors({ ...formErrors, [name]: false });
+        }
+    };
+
+    const resetForm = () => {
+        setFormData({
+            fname: '',
+            lname: '',
+            gender: '',
+            age: '',
+            email: '',
+            pnumber: '',
+            cname: '',
+            aid: '',
+            password: ''
+        });
+        setFormErrors({
+            fname: false,
+            lname: false,
+            gender: false,
+            age: false,
+            email: false,
+            pnumber: false,
+            cname: false,
+            aid: false,
+            password: false
+        });
+    };
+
+    const handleSubmit = () => {
+        // Check if any field has errors
+        const hasErrors = Object.values(formErrors).some(error => error);
+        if (!hasErrors) {
+            // Submit the form
+            fetch('http://localhost:5000/api/students', { // Ensure this URL matches your backend URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Student added successfully');
+                    resetForm(); // Reset the form after successful submission
+                    // You can handle success here, like showing a success message or redirecting
+                } else {
+                    console.error('Error adding student to database');
+                    // Handle error response from the server
+                }
+            })
+            .catch(error => {
+                console.error('Error adding student to database:', error);
+                // Handle network errors or other exceptions
+            });
+        } else {
+            console.error('Form has errors. Cannot submit.');
+            // Handle form errors
+        }
+
     };
 
     return (
@@ -145,6 +247,7 @@ const add = () => {
                                     autoComplete="off"
                                 >
                                     <TextField
+
                                         id="firstName"
                                         label="First Name"
                                         variant="standard"
@@ -152,6 +255,15 @@ const add = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.firstName)}
                                         helperText={errors.firstName}
+
+                                        id="fname"
+                                        name="fname"
+                                        label="First Name"
+                                        variant="standard"
+                                        value={formData.fname}
+                                        onChange={handleChange}
+                                        error={formErrors.fname}
+
                                     />
                                 </Box>
                             </div>
@@ -169,12 +281,21 @@ const add = () => {
                                 >
                                     <TextField
                                         id="age"
+
                                         label="Age"
                                         variant="standard"
                                         value={formValues.age}
                                         onChange={handleInputChange}
                                         error={Boolean(errors.age)}
                                         helperText={errors.age}
+
+                                        name="age"
+                                        label="Age"
+                                        variant="standard"
+                                        value={formData.age}
+                                        onChange={handleChange}
+                                        error={formErrors.age}
+ 
                                     />
                                 </Box>
                             </div>
@@ -191,6 +312,7 @@ const add = () => {
                                     autoComplete="off"
                                 >
                                     <TextField
+
                                         id="courseName"
                                         label="Course Name"
                                         variant="standard"
@@ -198,6 +320,15 @@ const add = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.courseName)}
                                         helperText={errors.courseName}
+
+                                        id="cname"
+                                        name="cname"
+                                        label="Course Name"
+                                        variant="standard"
+                                        value={formData.cname}
+                                        onChange={handleChange}
+                                        error={formErrors.cname}
+ 
                                     />
                                 </Box>
                             </div>
@@ -217,6 +348,7 @@ const add = () => {
                                     autoComplete="off"
                                 >
                                     <TextField
+ 
                                         id="lastName"
                                         label="Last Name"
                                         variant="standard"
@@ -224,6 +356,15 @@ const add = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.lastName)}
                                         helperText={errors.lastName}
+
+                                        id="lname"
+                                        name="lname"
+                                        label="Last Name"
+                                        variant="standard"
+                                        value={formData.lname}
+                                        onChange={handleChange}
+                                        error={formErrors.lname}
+ 
                                     />
                                 </Box>
                             </div>
@@ -241,12 +382,21 @@ const add = () => {
                                 >
                                     <TextField
                                         id="email"
+ 
                                         label="Email"
                                         variant="standard"
                                         value={formValues.email}
                                         onChange={handleInputChange}
                                         error={Boolean(errors.email)}
                                         helperText={errors.email}
+
+                                        name="email"
+                                        label="Email"
+                                        variant="standard"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        error={formErrors.email}
+ 
                                     />
                                 </Box>
                             </div>
@@ -263,6 +413,7 @@ const add = () => {
                                     autoComplete="off"
                                 >
                                     <TextField
+ 
                                         id="admissionId"
                                         label="Admission ID"
                                         variant="standard"
@@ -270,6 +421,15 @@ const add = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.admissionId)}
                                         helperText={errors.admissionId}
+
+                                        id="aid"
+                                        name="aid"
+                                        label="Admission ID"
+                                        variant="standard"
+                                        value={formData.aid}
+                                        onChange={handleChange}
+                                        error={formErrors.aid}
+ 
                                     />
                                 </Box>
                             </div>
@@ -290,6 +450,7 @@ const add = () => {
                                 >
                                     <TextField
                                         id="gender"
+ 
                                         label="Gender"
                                         variant="standard"
                                         select
@@ -303,6 +464,14 @@ const add = () => {
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </TextField>
+
+                                        name="gender"
+                                        label="Gender"
+                                        variant="standard"
+                                        value={formData.gender}
+                                        onChange={handleChange}
+                                        error={formErrors.gender}
+                                    />
                                 </Box>
                             </div>
                             <div>
@@ -318,6 +487,7 @@ const add = () => {
                                     autoComplete="off"
                                 >
                                     <TextField
+ 
                                         id="phoneNumber"
                                         label="Phone Number"
                                         variant="standard"
@@ -325,12 +495,22 @@ const add = () => {
                                         onChange={handleInputChange}
                                         error={Boolean(errors.phoneNumber)}
                                         helperText={errors.phoneNumber}
+
+                                        id="pnumber"
+                                        name="pnumber"
+                                        label="Phone Number"
+                                        variant="standard"
+                                        value={formData.pnumber}
+                                        onChange={handleChange}
+                                        error={formErrors.pnumber}
+ 
                                     />
                                 </Box>
                             </div>
                             <div>
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
                                     <div>
+ 
                                         <FormControl sx={{
                                             marginTop: 7,
                                             marginLeft: 1,
@@ -345,6 +525,26 @@ const add = () => {
                                                 value={formValues.password}
                                                 onChange={handleInputChange}
                                                 error={Boolean(errors.password)}
+
+                                        <FormControl
+                                            sx={{
+                                                marginTop: 7,
+                                                marginLeft: 1,
+                                                backgroundColor: 'rgb(188, 187, 187)',
+                                                borderRadius: 4,
+                                                '& > :not(style)': { m: 1, width: '90%', height: '50px' },
+                                            }}
+                                            variant="standard"
+                                        >
+                                            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                                            <Input
+                                                id="password"
+                                                name="password"
+                                                type={showPassword ? 'text' : 'password'}
+                                                value={formData.password}
+                                                onChange={handleChange}
+                                                error={formErrors.password}
+ 
                                                 endAdornment={
                                                     <InputAdornment position="end">
                                                         <IconButton
@@ -386,6 +586,10 @@ const add = () => {
             </div>
         </div>
     );
+
+}
 }
 
 export default add;
+
+

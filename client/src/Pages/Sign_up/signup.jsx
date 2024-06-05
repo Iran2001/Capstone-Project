@@ -60,7 +60,7 @@ const Signup = () => {
 
   const handlePasswordChange = (e) => {
     const value = e.target.value;
-    if (/^(?=.*[A-Z])[A-Za-z\d!@#$%^&*()_+]{0,}$/.test(value) || value === '') {
+    if (/^(?=.*[A-Z])[A-Za-z\d!@#$%^&*()_+]{8,}$/.test(value) || value === '') {
       setPassword(value);
       setPasswordError('');
     } else {
@@ -86,6 +86,16 @@ const Signup = () => {
       password,
     };
 
+    if (!username || !email || !password || !confirmPassword) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    if (usernameError || emailError || passwordError || confirmPasswordError) {
+      alert('Please fix the errors before submitting.');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:5000/api/signup', {
         method: 'POST',
@@ -97,7 +107,7 @@ const Signup = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Sign up successful');
-        navigate('/signin'); // Navigate to the sign-in page after successful sign-up
+        navigate('/student-panel'); // Navigate to the student panel after successful sign-up
       } else {
         alert(`Sign up failed: ${result.message}`);
       }

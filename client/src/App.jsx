@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Importing Pages
@@ -34,11 +34,6 @@ import Stdsick_leave from './Pages/Stdsick_leave/stdsicklv';
 import Stdleave_req from './Pages/Stdleave_req/leavereq';
 
 // Importing Components
-import Homepage_head from './Component/Homepage_head/homepage';
-import Homepage_footer from './Component/Homepage_footer/footer';
-import Head from './Component/Head/head';
-import Sign_side from './Component/Sign_side/side';
-import Student_head from './Component/Student_head/sthead';
 
 const App = () => {
   return (
