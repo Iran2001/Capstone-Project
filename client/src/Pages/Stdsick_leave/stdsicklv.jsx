@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './stdsicklv.css'
 import Student_head from '../../Component/Student_head/sthead'
 import Box from '@mui/material/Box';

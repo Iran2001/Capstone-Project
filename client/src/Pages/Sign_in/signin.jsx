@@ -68,8 +68,10 @@ const Signin = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Login successful');
-        navigate('/'); // Navigate to the home page after successful sign-in
-      } else {
+        navigate('/list2'); // Navigate to the home page after successful sign-in
+      }
+      
+      else {
         alert(`Login failed: ${result.message}`);
       }
     } catch (error) {
